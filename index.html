@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+	<title>Shivankar Patra Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<link rel="stylesheet" href="css/aos.css">
+
+	<link rel="stylesheet" href="css/ionicons.min.css">
+
+	<link rel="stylesheet" href="css/flaticon.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
+
+
+
+	<style>
+		/*======================================
+//--//-->   ABOUT
+======================================*/
+
+		.about-mf .box-shadow-full {
+			padding-top: 4rem;
+			padding-bottom: 4rem;
+		}
+
+		.about-mf .about-img {
+			margin-bottom: 2rem;
+		}
+
+		.about-mf .about-img img {
+			margin-left: 10px;
+		}
+
+
+		.skill-mf .progress {
+			/* background-color: #cde1f8; */
+			margin: .5rem 0 1.2rem 0;
+			border-radius: 0;
+			height: .7rem;
+		}
+
+		.skill-mf .progress .progress-bar {
+			height: .7rem;
+			background-color: #ffbd39;
+		}
+
+
+		/* Animation styles */
+		#typing-animation {
+			position: relative;
+			font-size: 30px;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+			overflow: hidden;
+			white-space: nowrap;
+			animation: typing 3s steps(20, end) infinite;
+		}
+
+		#typing-animation:before {
+			content: "";
+			/* position: absolute; */
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background-color: #ccc;
+			animation: typing-cursor 0.5s ease-in-out infinite;
+		}
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+
+			to {
+				width: 100%;
+			}
+		}
+
+		@keyframes typing-cursor {
+			from {
+				width: 5px;
+			}
+
+			to {
+				width: 0;
+			}
+		}
+
+
+		/* project image zoom effect */
+
+		.zoom-effect {
+			overflow: hidden;
+			transition: transform 0.3s ease-out;
+		}
+
+		.zoom-effect:hover {
+			transform: scale(1.1);
+		}
+	</style>
+
+
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+		<div class="container">
+			<a class="navbar-brand" href="index-2.html">Shivankar Patra</a>
+			<button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="oi oi-menu"></span> Menu
+			</button>
+
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav nav ml-auto">
+					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+					<li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<section id="home-section" class="hero">
+		<div class="home-slider  owl-carousel">
+			<div class="slider-item ">
+				<div class="overlay"></div>
+				<div class="container">
+					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
+						data-scrollax-parent="true">
+						<div class="one-third js-fullheight order-md-last img"
+							style="background-image:url(images/bg_1.png);">
+							<div class="overlay"></div>
+						</div>
+						<div class="one-forth d-flex  align-items-center ftco-animate"
+							data-scrollax=" properties: { translateY: '70%' }">
+							<div class="text">
+								<span class="subheading">Hello!</span>
+								<h1 class="mb-4 mt-3">I'm <span>Shivankar</span></h1>
+
+								<!-- Element to contain animated typing -->
+								<span id="typing-animation"></span>
+
+								<script>
+
+									// Initialize the typing animation
+									const typingAnimationElement = document.getElementById('typing-animation');
+
+									// Create an array of typing text
+									const typingTexts = [
+										'Innovative  ',
+										'Analytical  ',
+										'Strategic  ',
+										'Insightful   ',
+									];
+
+									// Create a function to display the typing animation for a given text
+									function playTypingAnimation(text) {
+										// Loop through each character and add it to the element
+										for (let i = 0; i < text.length; i++) {
+											setTimeout(() => {
+												typingAnimationElement.textContent += text[i];
+											}, i * 200); // Increase the delay to slow down the typing animation
+										}
+
+										// Once the animation is complete, reset the text and start over
+										setTimeout(() => {
+											typingAnimationElement.textContent = '';
+											playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+										}, text.length * 200);
+									}
+
+									// Start the typing animation loop
+									playTypingAnimation(typingTexts[0]);
+
+								</script>
+
+								<br>
+								<br>
+								<h2>Data Scientist</h2>
+								<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+								<!-- <br> -->
+								<p>
+									<a href="https://www.linkedin.com/in/shivankar-patra"
+										class="btn btn-white btn-outline-white py-3 px-4">LinkedIn</a>
+									<a href="https://github.com/shivankarpatra04"
+										class="btn btn-white btn-outline-white py-3 px-4">Github</a>
+
+								</p>
+
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+		<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+					<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay" style="margin-top: 20px;">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+										<div class="about-img">
+											<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+										</div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+										<div class="about-info">
+											<p><span class="title-s">Name: </span> <span>Shivankar Patra</span></p>
+											<p><span class="title-s">Job Role: </span> <span>Data Scientist</span></p>
+											<p><span class="title-s">Experience: </span> <span>6 months</span></p>
+											<p><span class="title-s">Address: </span> <span>Govindpuri, Delhi,
+													India</span></p>
+										</div>
+									</div>
+								</div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>Python</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;"
+											aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Data Visualization</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%"
+											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									<span>SQL/No-SQL</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%"
+											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Machine Learning</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%"
+											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+
+									<span>Deep Learning</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%"
+											aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+									<div style="margin-bottom: 20px;">
+										<span>Large Language Models</span>
+										<span class="pull-right">80%</span>
+										<div class="progress">
+											<div class="progress-bar" role="progressbar" style="width: 80%;"
+												aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+
+								<!-- <h1 class="big">About</h1> -->
+								<h2 class="mb-4">About Me</h2>
+
+								<p>I'm passionate about leveraging machine learning and data analytics to solve
+									real-world
+									problems. With a solid foundation in mathematics and statistics, I thrive on diving
+									deep into data and uncovering insights that drive meaningful results. Additionally,
+									I excel in transforming complex datasets into compelling narratives that inform
+									strategic decision-making and drive actionable outcomes.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Data Scientist &amp; NLP
+											Engineer</span></li>
+									<li class="d-flex"><span>Programming Languages:</span> <span> Python, SQL
+											&amp; Java</span></li>
+									<li class="d-flex"><span>Data Preprocessing:</span> <span>SQL, Pandas &amp;
+											Numpy</span></li>
+									<li class="d-flex"><span>Data Visualization:</span> <span>Power BI, Matplotlib
+											&amp; Seaborn</span></li>
+									<li class="d-flex"><span>Machine Learning:</span> <span>Scikit-learn</span></li>
+									<li class="d-flex"><span>Deep Learning:</span> <span> Tensorflow
+											&amp; Large Language Models</span></li>
+
+									<li class="d-flex"><span>Deployment:</span> <span>Streamlit
+										</span></li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<section class="ftco-section ftco-no-pb" id="resume-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Resume</h1>
+					<h2 class="mb-4">Resume</h2>
+					<p>I'm passionate about leveraging machine learning and data analytics to solve real-world
+						problems. With a solid foundation in mathematics and statistics, I thrive on diving
+						deep into data and uncovering insights that drive meaningful results.</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<h1 class="big-4">Experience</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">April 24 - May 24</span>
+						<h2>Data Science Intern</h2>
+						<span class="position">Cognifyz Technology </span>
+						<p class="mt-4">
+						<ul>
+							<li>Leveraged data exploration, cleaning, and pre-processing techniques to prepare
+								restaurant data for
+								machine learning models.</li>
+							<li>Delivered data-driven insights on customer ratings and popular dishes, driving a 20%
+								sales increase
+								in high-traffic locations.</li>
+							<li>Performed geospatial analysis to map restaurants, assess city/country distribution, and
+								identify
+								correlations between location and ratings.</li>
+							<li>Developed and evaluated restaurant rating prediction models using regression techniques
+								like linear
+								regression, decision trees, and random forests. Optimized model performance through
+								training/testing
+								splits and robust evaluation metrics.</li>
+							<li>Uncovered customer preferences through cuisine-rating analysis. Identified top cuisines
+								and
+								investigated rating trends across different cuisines.</li>
+							<li>Created compelling data visualizations (histograms, bar charts) to illustrate rating
+								distribution,
+								compare cuisine/city ratings, and visualize relationships between features and target
+								variables.
+							</li>
+							</p>
+					</div>
+
+				</div>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">May 2024 - June 2024</span>
+						<h2>Data Science Intern</h2>
+
+						<p class="mt-4">
+						<ul>
+							<li>Earned a Certificate of Completion upon successful project execution.</li>
+							<li>Gained hands-on experience with machine learning, data preprocessing, and model
+								evaluation.</li>
+							<li>Demonstrated ability to work independently and collaboratively on data science projects.
+							</li>
+							<li>Developed a comprehensive GitHub repository showcasing all project work and
+								methodologies.</li>
+						</ul>
+						<p><strong>Skills Acquired:</strong></p>
+						<ul>
+							<li>Machine Learning (Supervised Learning, Classification, Regression)</li>
+							<li>Data Analysis & Visualization (Pandas, Matplotlib, Seaborn)</li>
+							<li>Python Programming (Scikit-Learn, NumPy)</li>
+							<li>Data Preprocessing & Feature Engineering</li>
+							<li>Model Evaluation & Validation (Accuracy, Precision, Recall, F1-score)</li>
+						</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+
+		<div class="row">
+			<div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">2022-2024</span>
+					<h2>Master's of Computer Applications</h2>
+					<span class="position">Jamia Hamdard University</span>
+					<p class="mt-4">Throughout my MCA journey, I cultivated a robust skill set encompassing
+						programming, database management, and software development. Additionally, I delved into
+						advanced areas such as soft computing and machine learning, amplifying my analytical and
+						problem-solving capabilities. Eager to apply these skills in a dynamic data science role.
+					</p>
+					<span class="position">CGPA: 7.5</span>
+
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">2019-2022</span>
+					<h2>Bachelor's in Computer Applications</h2>
+					<span class="position">Jamia Hamdard University</span>
+					<p class="mt-4">My BCA studies equipped me with a strong foundation in programming, database
+						management, and software development. I further honed my analytical and problem-solving
+						abilities by exploring advanced areas like soft computing and machine learning.</p>
+					<span class="position">CGPA: 7.5</span>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="row justify-content-center mt-5">
+			<div class="col-md-6 text-center ftco-animate">
+				<p><a href="https://drive.google.com/file/d/1g_HeagnPZd_B7bVRVxmv1aRfluanaTb-/view?usp=sharing&amp;ouid=109146116718666117885&amp;rtpof=true&amp;sd=true"
+						class="btn btn-primary py-4 px-5">Download CV</a></p>
+			</div>
+		</div>
+		</div>
+	</section>
+
+
+
+	<section class="ftco-section" id="project-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Projects</h1>
+					<h2 class="mb-4">Projects</h2>
+					<p>Below are some of my projects on Machine Learning & Data Visualization Projects</p>
+				</div>
+			</div>
+			<div class="row d-flex">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/shivankarpatra04/thyroid-cancer-prediction-final-app"
+							class="block-20 zoom-effect"
+							style="background-image: url('images/thyroid-cancer-prediction.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/shivankarpatra04/thyroid-cancer-prediction-final-app">Thyroid
+									Cancer Prediction</a></h3>
+							<ul>
+								<li>Utilized data exploration techniques to analyze a comprehensive dataset of clinical
+									and demographic
+									features associated with thyroid cancer. (Highlights data exploration skills and the
+									medical
+									context)</li>
+								<li>Implemented machine learning models for thyroid cancer diagnosis. Evaluated model
+									performance using
+									robust metrics to select the optimal model for clinical application. (Focuses on
+									technical skills
+									and business impact)</li>
+								<li>Generated confusion matrix visualizations to assess model accuracy and identify
+									areas for potential
+									improvement. (Showcases data visualization skills and problem-solving abilities)
+								</li>
+								<li>Performed t-test analysis to compare groups within the dataset, uncovering
+									significant relationships
+									between variables and thyroid cancer diagnosis. (Emphasizes statistical analysis
+									skills and
+									uncovering key insights)</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://github.com/shivankarpatra04/Cognifyz-Technologies" class="block-20 zoom-effect"
+							style="background-image: url('images/resturant-analysis.png');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/shivankarpatra04/Cognifyz-Technologies">Restaurant
+									Dataset Analysis</a></h3>
+							<ul>
+								<li>Extracted insights from restaurant data using data analysis and machine learning
+									techniques.</li>
+								<li>Prepared data for modeling through cleaning, pre-processing, and exploration.</li>
+								<li>Analyzed restaurant distribution and location-rating correlations with geospatial
+									analysis.</li>
+								<li>Built and evaluated restaurant rating prediction models using various regression
+									algorithms (e.g.,
+									linear regression, decision trees, random forests). Optimized model performance
+									through
+									training/testing splits and evaluation metrics.</li>
+								<li>Analyzed customer preferences by investigating relationships between cuisine type,
+									rating, and
+									popularity.</li>
+								<li>Created data visualizations (histograms, bar charts, etc.) to communicate key
+									findings effectively.
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://github.com/shivankarpatra04/Dashboard-of-Sales-Power-BI"
+							class="block-20 zoom-effect" style="background-image: url('images/sales-dashboard.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/shivankarpatra04/Dashboard-of-Sales-Power-BI">Interactive
+									Sales
+									Dashboard with PowerBI</a></h3>
+							<ul>
+								<li>Data Transformation & User Interaction: Established data connections, joined tables,
+									and created
+									calculations to prepare data for analysis. Implemented user-defined parameters for
+									interactive
+									visualizations.</li>
+								<li>Advanced Data Exploration & Visualization: Employed complex parameters for in-depth
+									analysis at
+									various levels. Utilized filters, slicers, and a variety of customized charts (bar,
+									pie, donut,
+									clustered bar, scatter, line, area, map) to effectively communicate insights.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://www.linkedin.com/feed/update/urn:li:activity:7204147707966283776/"
+							class="block-20 zoom-effect" style="background-image: url('images/web-scraping.jpg');">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://www.linkedin.com/feed/update/urn:li:activity:7204147707966283776/">Web
+									Scraping
+									Mobile Data | Python & BeautifulSoup </a></h3>
+							<ul>
+								<li>Data Extraction & Transformation: Implemented web scraping techniques to extract
+									detailed mobile
+									data from Flipkart. Gathered information including product names, prices, memory,
+									display
+									specifications, camera details, battery life, CPU, and warranty information.</li>
+								<li>Advanced Data Processing & Storage: Utilized Python libraries (requests and
+									BeautifulSoup) to parse
+									and clean the data. Stored the data in structured formats for further analysis and
+									visualization.
+								</li>
+								<li>Code Efficiency & Optimization: Developed robust code to handle exceptions and
+									ensure accurate data
+									collection. Optimized scraping process to efficiently gather data from multiple
+									pages.</li>
+								<li>Presentation & Visualization: Created a PowerPoint presentation to showcase the
+									project. Highlighted
+									the objectives, methodology, key code snippets, and insights derived from the data.
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+	</section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+		<div class="container">
+			<div class="row d-md-flex align-items-center">
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="50">0</strong>
+							<span>Hours spent</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="5">0</strong>
+							<span>Books read</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+					<div class="block-18">
+						<div class="text">
+							<strong class="number" data-number="10000">0</strong>
+							<span>Lines of code</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<div class="heading">
+					</div>
+				</div>
+			</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Contact</h1>
+					<h2 class="mb-4">Contact Me</h2>
+					<p>Below are the details to reach out to me!</p>
+				</div>
+			</div>
+
+			<div class="row d-flex contact-info mb-5">
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-map-signs"></span>
+						</div>
+						<h3 class="mb-4">Address</h3>
+						<p>Govindpuri, Delhi, India</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-phone2"></span>
+						</div>
+						<h3 class="mb-4">Contact Number</h3>
+						<p><a href="tel://9818086303">+91 9818086303</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-paper-plane"></span>
+						</div>
+						<h3 class="mb-4">Email Address</h3>
+						<p><a href="shivankarpatra09@gmail.com">shivankarpatra09@gmail.com</a></p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
+					<div class="align-self-stretch box p-4 text-center">
+						<div class="icon d-flex align-items-center justify-content-center">
+							<span class="icon-globe"></span>
+						</div>
+						<h3 class="mb-4">Download Resume</h3>
+						<p><a
+								href="https://drive.google.com/file/d/1g_HeagnPZd_B7bVRVxmv1aRfluanaTb-/view?usp=drive_link&amp;ouid=109146116718666117885&amp;rtpof=true&amp;sd=true">Click
+								Here</a></p>
+					</div>
+				</div>
+
+
+			</div>
+	</section>
+
+
+
+
+	<footer class="ftco-footer ftco-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center">
+
+					<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						Copyright &copy;
+						<script>document.write(new Date().getFullYear());</script> All rights reserved | This template
+						is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a
+							href="https://colorlib.com/" target="_blank">Colorlib</a>
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+	<!-- loader -->
+	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+				stroke="#F96D00" />
+		</svg></div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/scrollax.min.js"></script>
+
+	<script src="js/main.js"></script>
+
+</body>
+
+
+</html>
