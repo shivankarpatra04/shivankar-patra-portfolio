@@ -141,19 +141,19 @@
 			</div>
 		</div>
 	</nav>
-	<section id="home-section" class="hero">
-		<div class="home-slider  owl-carousel">
-			<div class="slider-item ">
+	<section id="home-section" class="hero" style="height: 100vh; overflow: hidden; position: relative;">
+		<div class="home-slider owl-carousel" style="height: 100%;">
+			<div class="slider-item" style="height: 100%;">
 				<div class="overlay"></div>
-				<div class="container">
+				<div class="container" style="height: 100%;">
 					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end"
-						data-scrollax-parent="true">
+						data-scrollax-parent="true" style="height: 100%;">
 						<div class="one-third js-fullheight order-md-last img"
-							style="background-image:url(images/bg_1.png);">
+							style="background-image:url(images/bg_1.png); height: 100%; background-size: cover; background-position: center center;">
 							<div class="overlay"></div>
 						</div>
-						<div class="one-forth d-flex  align-items-center ftco-animate"
-							data-scrollax=" properties: { translateY: '70%' }">
+						<div class="one-forth d-flex align-items-center ftco-animate"
+							data-scrollax="properties: { translateY: '70%' }">
 							<div class="text">
 								<span class="subheading">Hello!</span>
 								<h1 class="mb-4 mt-3">I'm <span>Shivankar</span></h1>
@@ -162,7 +162,6 @@
 								<span id="typing-animation"></span>
 
 								<script>
-
 									// Initialize the typing animation
 									const typingAnimationElement = document.getElementById('typing-animation');
 
@@ -192,24 +191,17 @@
 
 									// Start the typing animation loop
 									playTypingAnimation(typingTexts[0]);
-
 								</script>
 
 								<br>
 								<br>
 								<h2>Data Scientist</h2>
-								<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-								<!-- <br> -->
 								<p>
 									<a href="https://www.linkedin.com/in/shivankar-patra"
 										class="btn btn-white btn-outline-white py-3 px-4">LinkedIn</a>
 									<a href="https://github.com/shivankarpatra04"
 										class="btn btn-white btn-outline-white py-3 px-4">Github</a>
-
 								</p>
-
-
-
 							</div>
 						</div>
 					</div>
@@ -217,6 +209,8 @@
 			</div>
 		</div>
 	</section>
+
+
 
 
 
